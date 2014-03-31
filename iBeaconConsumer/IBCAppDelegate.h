@@ -1,5 +1,5 @@
 //
-//  DCViewController.h
+//  DCAppDelegate.h
 //  iBeaconConsumer
 //
 //  Created by Eric Favre on 31/03/2014.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DCViewController : UIViewController
+@interface IBCAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
 
 @end

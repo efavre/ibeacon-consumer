@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E06E78518E97162002299EE /* IBCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E06E78418E97162002299EE /* IBCViewController.m */; };
+		9E06E78818E97199002299EE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E06E78718E97199002299EE /* CoreLocation.framework */; };
+		9E06E78A18E9719F002299EE /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E06E78918E9719F002299EE /* CoreBluetooth.framework */; };
+		9E06E78E18E97228002299EE /* IBCConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E06E78D18E97228002299EE /* IBCConstant.m */; };
+		9E06E78F18E97228002299EE /* IBCConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E06E78D18E97228002299EE /* IBCConstant.m */; };
 		9EE5C86E18E9678400D6D787 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE5C86D18E9678400D6D787 /* Foundation.framework */; };
 		9EE5C87018E9678400D6D787 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE5C86F18E9678400D6D787 /* CoreGraphics.framework */; };
 		9EE5C87218E9678400D6D787 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE5C87118E9678400D6D787 /* UIKit.framework */; };
 		9EE5C87818E9678400D6D787 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EE5C87618E9678400D6D787 /* InfoPlist.strings */; };
 		9EE5C87A18E9678400D6D787 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE5C87918E9678400D6D787 /* main.m */; };
-		9EE5C87E18E9678400D6D787 /* DCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE5C87D18E9678400D6D787 /* DCAppDelegate.m */; };
+		9EE5C87E18E9678400D6D787 /* IBCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE5C87D18E9678400D6D787 /* IBCAppDelegate.m */; };
 		9EE5C88118E9678400D6D787 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EE5C87F18E9678400D6D787 /* Main.storyboard */; };
-		9EE5C88418E9678400D6D787 /* DCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE5C88318E9678400D6D787 /* DCViewController.m */; };
 		9EE5C88618E9678400D6D787 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EE5C88518E9678400D6D787 /* Images.xcassets */; };
 		9EE5C88D18E9678400D6D787 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE5C88C18E9678400D6D787 /* XCTest.framework */; };
 		9EE5C88E18E9678400D6D787 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE5C86D18E9678400D6D787 /* Foundation.framework */; };
@@ -34,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E06E78318E97162002299EE /* IBCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBCViewController.h; path = controllers/IBCViewController.h; sourceTree = "<group>"; };
+		9E06E78418E97162002299EE /* IBCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IBCViewController.m; path = controllers/IBCViewController.m; sourceTree = "<group>"; };
+		9E06E78718E97199002299EE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9E06E78918E9719F002299EE /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		9E06E78C18E97228002299EE /* IBCConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IBCConstant.h; path = utils/IBCConstant.h; sourceTree = "<group>"; };
+		9E06E78D18E97228002299EE /* IBCConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IBCConstant.m; path = utils/IBCConstant.m; sourceTree = "<group>"; };
 		9EE5C86A18E9678400D6D787 /* iBeaconConsumer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBeaconConsumer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE5C86D18E9678400D6D787 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9EE5C86F18E9678400D6D787 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -42,11 +52,9 @@
 		9EE5C87718E9678400D6D787 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9EE5C87918E9678400D6D787 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9EE5C87B18E9678400D6D787 /* iBeaconConsumer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iBeaconConsumer-Prefix.pch"; sourceTree = "<group>"; };
-		9EE5C87C18E9678400D6D787 /* DCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCAppDelegate.h; sourceTree = "<group>"; };
-		9EE5C87D18E9678400D6D787 /* DCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCAppDelegate.m; sourceTree = "<group>"; };
+		9EE5C87C18E9678400D6D787 /* IBCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IBCAppDelegate.h; sourceTree = "<group>"; };
+		9EE5C87D18E9678400D6D787 /* IBCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IBCAppDelegate.m; sourceTree = "<group>"; };
 		9EE5C88018E9678400D6D787 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9EE5C88218E9678400D6D787 /* DCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCViewController.h; sourceTree = "<group>"; };
-		9EE5C88318E9678400D6D787 /* DCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCViewController.m; sourceTree = "<group>"; };
 		9EE5C88518E9678400D6D787 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9EE5C88B18E9678400D6D787 /* iBeaconConsumerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iBeaconConsumerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE5C88C18E9678400D6D787 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -60,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E06E78A18E9719F002299EE /* CoreBluetooth.framework in Frameworks */,
+				9E06E78818E97199002299EE /* CoreLocation.framework in Frameworks */,
 				9EE5C87018E9678400D6D787 /* CoreGraphics.framework in Frameworks */,
 				9EE5C87218E9678400D6D787 /* UIKit.framework in Frameworks */,
 				9EE5C86E18E9678400D6D787 /* Foundation.framework in Frameworks */,
@@ -79,6 +89,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E06E78618E97170002299EE /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9E06E78318E97162002299EE /* IBCViewController.h */,
+				9E06E78418E97162002299EE /* IBCViewController.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		9E06E78B18E971F6002299EE /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				9E06E78C18E97228002299EE /* IBCConstant.h */,
+				9E06E78D18E97228002299EE /* IBCConstant.m */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
 		9EE5C86118E9678400D6D787 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +129,8 @@
 		9EE5C86C18E9678400D6D787 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9E06E78918E9719F002299EE /* CoreBluetooth.framework */,
+				9E06E78718E97199002299EE /* CoreLocation.framework */,
 				9EE5C86D18E9678400D6D787 /* Foundation.framework */,
 				9EE5C86F18E9678400D6D787 /* CoreGraphics.framework */,
 				9EE5C87118E9678400D6D787 /* UIKit.framework */,
@@ -112,11 +142,11 @@
 		9EE5C87318E9678400D6D787 /* iBeaconConsumer */ = {
 			isa = PBXGroup;
 			children = (
-				9EE5C87C18E9678400D6D787 /* DCAppDelegate.h */,
-				9EE5C87D18E9678400D6D787 /* DCAppDelegate.m */,
+				9E06E78618E97170002299EE /* controllers */,
+				9E06E78B18E971F6002299EE /* utils */,
+				9EE5C87C18E9678400D6D787 /* IBCAppDelegate.h */,
+				9EE5C87D18E9678400D6D787 /* IBCAppDelegate.m */,
 				9EE5C87F18E9678400D6D787 /* Main.storyboard */,
-				9EE5C88218E9678400D6D787 /* DCViewController.h */,
-				9EE5C88318E9678400D6D787 /* DCViewController.m */,
 				9EE5C88518E9678400D6D787 /* Images.xcassets */,
 				9EE5C87418E9678400D6D787 /* Supporting Files */,
 			);
@@ -250,9 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E06E78E18E97228002299EE /* IBCConstant.m in Sources */,
 				9EE5C87A18E9678400D6D787 /* main.m in Sources */,
-				9EE5C88418E9678400D6D787 /* DCViewController.m in Sources */,
-				9EE5C87E18E9678400D6D787 /* DCAppDelegate.m in Sources */,
+				9EE5C87E18E9678400D6D787 /* IBCAppDelegate.m in Sources */,
+				9E06E78518E97162002299EE /* IBCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E06E78F18E97228002299EE /* IBCConstant.m in Sources */,
 				9EE5C89918E9678400D6D787 /* iBeaconConsumerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,7 +388,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -457,6 +489,7 @@
 				9EE5C89E18E9678400D6D787 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9EE5C89F18E9678400D6D787 /* Build configuration list for PBXNativeTarget "iBeaconConsumerTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +498,7 @@
 				9EE5C8A118E9678400D6D787 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
