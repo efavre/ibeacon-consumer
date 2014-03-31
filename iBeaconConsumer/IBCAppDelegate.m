@@ -7,12 +7,75 @@
 //
 
 #import "IBCAppDelegate.h"
+#import "IBCConstant.h"
 
 @implementation IBCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self startMonitoring];
     return YES;
 }
+
+- (void)startMonitoring
+{
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    
+    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:UUID];
+    CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"Livecode-Region"];
+    region.notifyEntryStateOnDisplay = YES;
+    
+    if ([CLLocationManager isMonitoringAvailableForClass:[CLBeaconRegion class]])
+    {
+        [self.locationManager startMonitoringForRegion:region];
+    }
+    else
+    {
+        NSLog(@"This device does not support monitoring beacon regions");
+    }
+}
+
+#pragma mark - CLLocationManagerDelegate
+
+
+- (void)locationManager:(CLLocationManager*)manager didEnterRegion:(CLRegion*)region
+{
+    [self notifyEnteredRegion];
+}
+
+-(void)locationManager:(CLLocationManager*)manager didExitRegion:(CLRegion*)region
+{
+    [self notifyExitedRegion];
+}
+
+#pragma mark - Local Notifications
+
+- (void)notifyEnteredRegion
+{
+    if (! self.isInsideRegion)
+    {
+        UILocalNotification *notification = [[UILocalNotification alloc] init];
+        notification.alertBody = @"Entré !";
+        notification.alertAction = @"Open";
+        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    }
+    
+    self.isInsideRegion = YES;
+}
+
+- (void)notifyExitedRegion
+{
+    if (self.isInsideRegion)
+    {
+        UILocalNotification *notification = [[UILocalNotification alloc] init];
+        notification.alertBody = @"Sorti...";
+        notification.alertAction = @"Open";
+        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    }
+    
+    self.isInsideRegion = NO;
+}
+
 
 @end
