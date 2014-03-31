@@ -10,4 +10,9 @@
 
 @interface IBCViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *majorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *minorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *ssidLabel;
+@property (weak, nonatomic) IBOutlet UILabel *proximityLabel;
+
 @end
