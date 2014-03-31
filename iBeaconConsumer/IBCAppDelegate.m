@@ -53,28 +53,18 @@
 
 - (void)notifyEnteredRegion
 {
-    if (! self.isInsideRegion)
-    {
-        UILocalNotification *notification = [[UILocalNotification alloc] init];
-        notification.alertBody = @"Entré !";
-        notification.alertAction = @"Open";
-        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
-    }
-    
-    self.isInsideRegion = YES;
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    notification.alertBody = @"Entré !";
+    notification.alertAction = @"Open";
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
 }
 
 - (void)notifyExitedRegion
 {
-    if (self.isInsideRegion)
-    {
-        UILocalNotification *notification = [[UILocalNotification alloc] init];
-        notification.alertBody = @"Sorti...";
-        notification.alertAction = @"Open";
-        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
-    }
-    
-    self.isInsideRegion = NO;
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    notification.alertBody = @"Sorti...";
+    notification.alertAction = @"Open";
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
 }
 
 

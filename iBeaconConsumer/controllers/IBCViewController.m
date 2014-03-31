@@ -36,11 +36,28 @@
 - (void)locationManager:(CLLocationManager*)manager didEnterRegion:(CLRegion*)region
 {
     self.statusLabel.text = @"Bienvenue dans la région !";
+    [self.locationManager startRangingBeaconsInRegion:(CLBeaconRegion *)region];
 }
 
 -(void)locationManager:(CLLocationManager*)manager didExitRegion:(CLRegion*)region
 {
     self.statusLabel.text = @"Revenez vite dans la région !";
+    [self.locationManager stopRangingBeaconsInRegion:(CLBeaconRegion *)region];
+
+}
+
+-(void)locationManager:(CLLocationManager*)manager didRangeBeacons:(NSArray*)beacons inRegion:(CLBeaconRegion*)region
+{
+    for (CLBeacon *beacon in beacons)
+    {
+        
+        NSString *proximity = nil;
+        proximity = (beacon.proximity == CLProximityImmediate ? @"immediate" : (beacon.proximity == CLProximityNear ? @"near" : (beacon.proximity == CLProximityFar ? @"far" : @"unknown")));
+        self.proximityLabel.text = proximity;
+        self.rssiLabel.text = [NSString stringWithFormat:@"%ld",(long)beacon.rssi];
+        self.majorLabel.text = [NSString stringWithFormat:@"Majeur : %@",beacon.major];
+        self.minorLabel.text = [NSString stringWithFormat:@"Mineur : %@",beacon.minor];
+    }
 }
 
 @end

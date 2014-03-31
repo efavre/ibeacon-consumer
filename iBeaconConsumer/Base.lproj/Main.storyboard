@@ -125,7 +125,7 @@
                         <outlet property="majorLabel" destination="hAq-Pa-Ya3" id="5B7-yl-lMo"/>
                         <outlet property="minorLabel" destination="ueS-kb-AAK" id="ctW-z3-OCX"/>
                         <outlet property="proximityLabel" destination="2EW-NF-ywl" id="kJU-2u-Oez"/>
-                        <outlet property="ssidLabel" destination="at4-v9-Siv" id="APN-OM-uK8"/>
+                        <outlet property="rssiLabel" destination="at4-v9-Siv" id="pGk-Dn-Y5R"/>
                         <outlet property="statusLabel" destination="w1M-aX-8OP" id="voS-gu-sW9"/>
                     </connections>
                 </viewController>
