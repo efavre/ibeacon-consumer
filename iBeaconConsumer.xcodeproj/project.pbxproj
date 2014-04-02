@@ -230,6 +230,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Eric;
 				TargetAttributes = {
+					9EE5C86918E9678400D6D787 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
 					9EE5C88A18E9678400D6D787 = {
 						TestTargetID = 9EE5C86918E9678400D6D787;
 					};
@@ -412,6 +419,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iBeaconConsumer/iBeaconConsumer-Prefix.pch";
 				INFOPLIST_FILE = "iBeaconConsumer/iBeaconConsumer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -425,6 +433,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iBeaconConsumer/iBeaconConsumer-Prefix.pch";
 				INFOPLIST_FILE = "iBeaconConsumer/iBeaconConsumer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

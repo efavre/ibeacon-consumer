@@ -54,17 +54,14 @@
 - (void)notifyEnteredRegion
 {
     UILocalNotification *notification = [[UILocalNotification alloc] init];
-    notification.alertBody = @"Entré !";
+    notification.alertBody = @"Quelqu'un vous donne une carte !";
     notification.alertAction = @"Open";
     [[UIApplication sharedApplication] scheduleLocalNotification:notification];
 }
 
 - (void)notifyExitedRegion
 {
-    UILocalNotification *notification = [[UILocalNotification alloc] init];
-    notification.alertBody = @"Sorti...";
-    notification.alertAction = @"Open";
-    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+
 }
 
 

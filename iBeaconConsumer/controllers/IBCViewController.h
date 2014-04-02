@@ -8,13 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 
-@interface IBCViewController : UIViewController<CLLocationManagerDelegate>
+@interface IBCViewController : UIViewController<CLLocationManagerDelegate, CBPeripheralManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *majorLabel;
 @property (weak, nonatomic) IBOutlet UILabel *minorLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rssiLabel;
 @property (weak, nonatomic) IBOutlet UILabel *proximityLabel;
+
+- (IBAction)giveCard:(id)sender;
+- (IBAction)stopGivingCard:(id)sender;
 
 @end
